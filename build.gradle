@@ -1,11 +1,20 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.2.41'
+    ext {
+        kotlin_version = '1.2.41'
+        butterknifeVersion = '8.5.1'
+        daggerVersion = '2.11'
+        retrofitVersion = '2.3.0'
+        googleArchitectureComponents = '1.1.1'
+        glideVersion = '4.7.1'
+    }
+
     repositories {
         google()
         jcenter()
     }
+
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"

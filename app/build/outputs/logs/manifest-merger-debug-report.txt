@@ -1,68 +1,87 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-21:12
+ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-24:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/1812cdaf127ff3aa8b559a6bedbbd88e/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/e33999497aff60f5025c797e3d65f907/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/3a454e296ce2be743558923b5f959dd6/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/2626494b7d689e1be4ced174a0aab1ae/AndroidManifest.xml:17:1-30:12
+MERGED from [android.arch.lifecycle:reactivestreams:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/reactivestreams-1.1.1.aar/9a9c022a03bf34b3e9b619934b8f81e8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/6b3c3f901bc4050dbb84e4d0d7320062/AndroidManifest.xml:2:1-13:12
+MERGED from [com.jakewharton.rxbinding2:rxbinding:2.0.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/rxbinding-2.0.0.aar/2a426852478a6a9f4d2ebdbcc04bc739/AndroidManifest.xml:2:1-8:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/36dd6ef9c0d79f116b05b56da192ae72/AndroidManifest.xml:15:1-21:12
 MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/7cdda9bb9816a26fe3b1e47038e40a46/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/3a454e296ce2be743558923b5f959dd6/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-ui:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/f71220de29ca950ce2f2077ce429e560/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-utils:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/c94fb73c2fb9b147912ade6472e7dd19/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/a002ba1bb9aae828ac0e511a185259a5/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-compat:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/463b7c106100a361685017f875891cd0/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/91444845d01dedd5d99819f604bd93f8/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/a39b3da7653cb8c6edb5830900395fa7/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/55c82f44ee698c806e70da992320016a/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/069aa5e4dcb6357fcfdf94de8cd0f618/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-21:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/35346ef2dae2edf523143b919fec0383/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/fb01d6127b6d0363e29cfde07a639aaa/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/642bc186e83bfb6ce9c2709888e557ab/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/0c169dd138503ea90a45e56ed0309674/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/a28bdef4243ddfa48652de40fc2d0ed7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/f0efe27e94062635637bb9d8db7a5897/AndroidManifest.xml:2:1-11:12
+INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-24:12
 	package
 		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:11-46
 		INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml
-		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-21:12
+		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-24:12
 		INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml
-		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-21:12
+		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:2:1-24:12
 		INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:3:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:5:5-66
+	android:name
+		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:5:5-19:19
+ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:7:5-22:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/e33999497aff60f5025c797e3d65f907/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/e33999497aff60f5025c797e3d65f907/AndroidManifest.xml:9:5-20
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/2626494b7d689e1be4ced174a0aab1ae/AndroidManifest.xml:22:5-28:19
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/2626494b7d689e1be4ced174a0aab1ae/AndroidManifest.xml:22:5-28:19
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/6b3c3f901bc4050dbb84e4d0d7320062/AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/6b3c3f901bc4050dbb84e4d0d7320062/AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/f0efe27e94062635637bb9d8db7a5897/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/f0efe27e94062635637bb9d8db7a5897/AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:13:9-35
 	android:label
-		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:11:9-41
 	android:roundIcon
-		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:9:9-54
+		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:12:9-54
 	android:icon
-		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:10:9-43
 	android:allowBackup
-		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:11:9-40
-activity#com.tweener.simplemoviedb.MainActivity
-ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:12:9-18:20
+		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:14:9-40
 	android:name
-		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:12:19-47
+		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:8:9-54
+activity#com.tweener.simplemoviedb.movie.PopularMoviesActivity
+ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:15:9-21:20
+	android:name
+		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:15:19-62
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:13:13-17:29
+ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:14:17-68
+ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:17:17-68
 	android:name
-		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:14:25-66
+		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:16:17-76
+ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:19:17-76
 	android:name
-		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:16:27-74
+		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml:19:27-74
 uses-sdk
 INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml
@@ -71,10 +90,20 @@ MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/vivienmahe/.gradle/
 MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/1812cdaf127ff3aa8b559a6bedbbd88e/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/e33999497aff60f5025c797e3d65f907/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/e33999497aff60f5025c797e3d65f907/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/3a454e296ce2be743558923b5f959dd6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/3a454e296ce2be743558923b5f959dd6/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/2626494b7d689e1be4ced174a0aab1ae/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/2626494b7d689e1be4ced174a0aab1ae/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:reactivestreams:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/reactivestreams-1.1.1.aar/9a9c022a03bf34b3e9b619934b8f81e8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:reactivestreams:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/reactivestreams-1.1.1.aar/9a9c022a03bf34b3e9b619934b8f81e8/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/6b3c3f901bc4050dbb84e4d0d7320062/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/6b3c3f901bc4050dbb84e4d0d7320062/AndroidManifest.xml:7:5-9:41
+MERGED from [com.jakewharton.rxbinding2:rxbinding:2.0.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/rxbinding-2.0.0.aar/2a426852478a6a9f4d2ebdbcc04bc739/AndroidManifest.xml:6:5-44
+MERGED from [com.jakewharton.rxbinding2:rxbinding:2.0.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/rxbinding-2.0.0.aar/2a426852478a6a9f4d2ebdbcc04bc739/AndroidManifest.xml:6:5-44
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/36dd6ef9c0d79f116b05b56da192ae72/AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/36dd6ef9c0d79f116b05b56da192ae72/AndroidManifest.xml:19:5-43
 MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/7cdda9bb9816a26fe3b1e47038e40a46/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/7cdda9bb9816a26fe3b1e47038e40a46/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/3a454e296ce2be743558923b5f959dd6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/3a454e296ce2be743558923b5f959dd6/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/f71220de29ca950ce2f2077ce429e560/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/f71220de29ca950ce2f2077ce429e560/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-utils:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/c94fb73c2fb9b147912ade6472e7dd19/AndroidManifest.xml:20:5-44
@@ -83,14 +112,18 @@ MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/vivienma
 MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/a002ba1bb9aae828ac0e511a185259a5/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-compat:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/463b7c106100a361685017f875891cd0/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-compat:27.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/463b7c106100a361685017f875891cd0/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/91444845d01dedd5d99819f604bd93f8/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/91444845d01dedd5d99819f604bd93f8/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/a39b3da7653cb8c6edb5830900395fa7/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/a39b3da7653cb8c6edb5830900395fa7/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/55c82f44ee698c806e70da992320016a/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/55c82f44ee698c806e70da992320016a/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/069aa5e4dcb6357fcfdf94de8cd0f618/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/069aa5e4dcb6357fcfdf94de8cd0f618/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/35346ef2dae2edf523143b919fec0383/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/35346ef2dae2edf523143b919fec0383/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/fb01d6127b6d0363e29cfde07a639aaa/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/fb01d6127b6d0363e29cfde07a639aaa/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/642bc186e83bfb6ce9c2709888e557ab/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/642bc186e83bfb6ce9c2709888e557ab/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/0c169dd138503ea90a45e56ed0309674/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/0c169dd138503ea90a45e56ed0309674/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/a28bdef4243ddfa48652de40fc2d0ed7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/a28bdef4243ddfa48652de40fc2d0ed7/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/f0efe27e94062635637bb9d8db7a5897/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/f0efe27e94062635637bb9d8db7a5897/AndroidManifest.xml:5:5-7:41
 INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml
 INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
@@ -101,3 +134,13 @@ INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main
 		INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml
 		ADDED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/AndroidManifest.xml
+provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/2626494b7d689e1be4ced174a0aab1ae/AndroidManifest.xml:23:9-27:43
+	android:authorities
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/2626494b7d689e1be4ced174a0aab1ae/AndroidManifest.xml:25:13-68
+	android:multiprocess
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/2626494b7d689e1be4ced174a0aab1ae/AndroidManifest.xml:27:13-40
+	android:exported
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/2626494b7d689e1be4ced174a0aab1ae/AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/2626494b7d689e1be4ced174a0aab1ae/AndroidManifest.xml:24:13-83
