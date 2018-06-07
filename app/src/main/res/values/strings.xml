@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Simple Movie DB</string>
+    <string name="popular_movies_empty">There are no popular movies.</string>
+    <string name="popular_movies_list_section_header">POPULAR MOVIES</string>
 </resources>

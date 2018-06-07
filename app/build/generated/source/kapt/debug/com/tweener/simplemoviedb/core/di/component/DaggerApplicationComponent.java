@@ -2,11 +2,11 @@ package com.tweener.simplemoviedb.core.di.component;
 
 import android.content.Context;
 import com.tweener.simplemoviedb.core.di.module.ApplicationModule;
-import com.moodz.android.core.di.module.ApplicationModule_ProvidesContextFactory;
+import com.tweener.simplemoviedb.core.di.module.ApplicationModule_ProvidesContextFactory;
 import com.tweener.simplemoviedb.core.di.module.NetModule;
-import com.moodz.android.core.di.module.NetModule_ProvideHttpCacheFactory;
-import com.moodz.android.core.di.module.NetModule_ProvideRetrofitFactory;
-import com.moodz.android.core.di.module.NetModule_ProvidesOkHttpClientFactory;
+import com.tweener.simplemoviedb.core.di.module.NetModule_ProvideHttpCacheFactory;
+import com.tweener.simplemoviedb.core.di.module.NetModule_ProvideRetrofitFactory;
+import com.tweener.simplemoviedb.core.di.module.NetModule_ProvidesOkHttpClientFactory;
 import com.tweener.simplemoviedb.movie.PopularMoviesActivity;
 import com.tweener.simplemoviedb.movie.PopularMoviesActivity_MembersInjector;
 import dagger.MembersInjector;

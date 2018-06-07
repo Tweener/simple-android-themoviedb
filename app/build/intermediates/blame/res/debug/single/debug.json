@@ -552,6 +552,10 @@
         "source": "/Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/1812cdaf127ff3aa8b559a6bedbbd88e/res/drawable-xhdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
+        "merged": "/Users/vivienmahe/workspace/simple-android-themoviedb/app/build/intermediates/res/merged/debug/layout_popular_movies_list_item_movie_content.xml.flat",
+        "source": "/Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/res/layout/popular_movies_list_item_movie_content.xml"
+    },
+    {
         "merged": "/Users/vivienmahe/workspace/simple-android-themoviedb/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "/Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
@@ -1196,6 +1200,10 @@
         "source": "/Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/1812cdaf127ff3aa8b559a6bedbbd88e/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
     {
+        "merged": "/Users/vivienmahe/workspace/simple-android-themoviedb/app/build/intermediates/res/merged/debug/layout_popular_movies_list_item_movie.xml.flat",
+        "source": "/Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/res/layout/popular_movies_list_item_movie.xml"
+    },
+    {
         "merged": "/Users/vivienmahe/workspace/simple-android-themoviedb/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "/Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/1812cdaf127ff3aa8b559a6bedbbd88e/res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png"
     },
@@ -1342,6 +1350,10 @@
     {
         "merged": "/Users/vivienmahe/workspace/simple-android-themoviedb/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_holo_dark.xml.flat",
         "source": "/Users/vivienmahe/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/1812cdaf127ff3aa8b559a6bedbbd88e/res/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/vivienmahe/workspace/simple-android-themoviedb/app/build/intermediates/res/merged/debug/layout_popular_movies_list_item_section_header.xml.flat",
+        "source": "/Users/vivienmahe/workspace/simple-android-themoviedb/app/src/main/res/layout/popular_movies_list_item_section_header.xml"
     },
     {
         "merged": "/Users/vivienmahe/workspace/simple-android-themoviedb/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",

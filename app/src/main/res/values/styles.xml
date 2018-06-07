@@ -8,4 +8,45 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="popuplar_movies_list_item_section_header">
+        <item name="android:paddingTop">@dimen/popuplar_movies_list_item_section_header_padding_vert</item>
+        <item name="android:paddingBottom">@dimen/popuplar_movies_list_item_section_header_padding_vert</item>
+        <item name="android:paddingStart">@dimen/popuplar_movies_list_item_section_header_padding_horz</item>
+        <item name="android:paddingEnd">@dimen/popuplar_movies_list_item_section_header_padding_horz</item>
+    </style>
+
+    <style name="popuplar_movies_list_item_section_header_title">
+        <item name="android:text">@string/popular_movies_list_section_header</item>
+        <item name="android:textSize">@dimen/popuplar_movies_list_item_ection_header_title_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="popuplar_movies_list_item_movie_cardview">
+        <item name="cardCornerRadius">@dimen/cardview_corner_radius</item>
+        <item name="cardElevation">@dimen/cardview_elevation</item>
+        <item name="cardPreventCornerOverlap">true</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="popuplar_movies_list_item_movie_right_content">
+        <item name="android:paddingStart">@dimen/popuplar_movies_list_item_movie_right_content_padding</item>
+        <item name="android:paddingEnd">@dimen/popuplar_movies_list_item_movie_right_content_padding</item>
+        <item name="android:paddingBottom">@dimen/popuplar_movies_list_item_movie_right_content_padding</item>
+    </style>
+
+    <style name="popuplar_movies_list_item_movie_title">
+        <item name="android:textSize">@dimen/popuplar_movies_list_item_movie_title_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/popuplar_movies_list_item_movie_title</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">marquee</item>
+    </style>
+
+    <style name="popuplar_movies_list_item_movie_subtitle">
+        <item name="android:textSize">@dimen/popuplar_movies_list_item_movie_ratings_size</item>
+        <item name="android:textColor">@color/popuplar_movies_list_item_movie_ratings</item>
+    </style>
+
 </resources>

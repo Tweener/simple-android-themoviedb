@@ -14,5 +14,8 @@ class Constants {
         const val API_MOVIES = "movie/"
         const val API_MOVIE_DETAIL = API_MOVIES + "{movie_id}"
         const val API_POPULAR_MOVIES = API_MOVIES + "popular/"
+
+        const val API_IMAGE_THUMBNAIL_URL_FORMAT = "https://image.tmdb.org/t/p/w185/%s" // %s = poster_path
+        const val API_IMAGE_LARGE_URL_FORMAT = "https://image.tmdb.org/t/p/w780/%s" // %s = poster_path
     }
 }
