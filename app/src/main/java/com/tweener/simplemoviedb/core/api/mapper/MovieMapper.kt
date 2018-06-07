@@ -11,6 +11,7 @@ class MovieMapper {
     fun convertToEntity(api: ApiMovie): Movie {
         val movie = Movie()
 
+        movie.id = api.id
         movie.originalTitle = api.originalTitle
         movie.overview = api.overview
         movie.voteAverage = api.voteAverage

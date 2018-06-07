@@ -27,7 +27,6 @@
         <item name="cardPreventCornerOverlap">true</item>
         <item name="cardUseCompatPadding">true</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
-        <item name="android:clickable">true</item>
     </style>
 
     <style name="popuplar_movies_list_item_movie_right_content">

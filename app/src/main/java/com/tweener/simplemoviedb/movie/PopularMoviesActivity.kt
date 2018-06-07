@@ -47,7 +47,11 @@ class PopularMoviesActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshL
 
         swipeRefreshLayout.setOnRefreshListener(this)
 
-        adapter = PopularMoviesListAdapter()
+        adapter = PopularMoviesListAdapter(object : PopularMoviesListAdapter.Callback {
+            override fun onMovieTapped(movie: Movie) {
+                viewModel.onMovieSelected(movie)
+            }
+        })
         popularMoviesListView.adapter = adapter
 
         val movieService = retrofit.create(MovieService::class.java)

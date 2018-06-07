@@ -5,8 +5,8 @@ import android.os.Build
 import android.support.v7.widget.CardView
 import android.util.AttributeSet
 import android.view.View
+import android.widget.FrameLayout
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import butterknife.BindView
 import butterknife.ButterKnife
@@ -19,7 +19,7 @@ import com.tweener.simplemoviedb.core.glide.GlideApp
 /**
  * @author Vivien Mahe
  */
-class PopularMoviesMovieItem(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs) {
+class PopularMoviesMovieItem(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs) {
 
     companion object {
         private val TAG = PopularMoviesMovieItem::class.java.simpleName!!
