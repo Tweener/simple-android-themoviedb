@@ -3,6 +3,7 @@ package com.tweener.simplemoviedb.movie
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.support.design.widget.BottomSheetBehavior
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
@@ -14,10 +15,13 @@ import com.tweener.simplemoviedb.core.SimpleMovieDBApplication
 import com.tweener.simplemoviedb.core.domain.entity.Movie
 import com.tweener.simplemoviedb.core.extensions.gone
 import com.tweener.simplemoviedb.core.extensions.visible
+import com.tweener.simplemoviedb.movie.detail.PopularDetailView
+import com.tweener.simplemoviedb.movie.list.PopularMoviesListAdapter
+import com.tweener.simplemoviedb.movie.list.PopularMoviesListView
 import retrofit2.Retrofit
 import javax.inject.Inject
 
-class PopularMoviesActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
+class PopularMoviesActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener, PopularMoviesListAdapter.Callback {
 
     companion object {
         private val TAG = PopularMoviesActivity::class.java.simpleName!!
@@ -35,6 +39,9 @@ class PopularMoviesActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshL
     @BindView(R.id.movies_list_empty_view)
     lateinit var popularMoviesEmptyView: TextView
 
+    @BindView(R.id.movie_detail_view)
+    lateinit var popularDetailView: PopularDetailView
+
     private lateinit var viewModel: PopularMoviesViewModel
     private lateinit var adapter: PopularMoviesListAdapter
 
@@ -47,12 +54,13 @@ class PopularMoviesActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshL
 
         swipeRefreshLayout.setOnRefreshListener(this)
 
-        adapter = PopularMoviesListAdapter(object : PopularMoviesListAdapter.Callback {
-            override fun onMovieTapped(movie: Movie) {
-                viewModel.onMovieSelected(movie)
-            }
-        })
+        adapter = PopularMoviesListAdapter(this)
         popularMoviesListView.adapter = adapter
+
+        popularDetailView.popularDetailViewStatus.observe(this, Observer { isDetailViewOpened ->
+            // Disable swipe to refresh when the bottom sheet is opened
+            swipeRefreshLayout.isEnabled = isDetailViewOpened!!.not()
+        })
 
         val movieService = retrofit.create(MovieService::class.java)
 
@@ -60,6 +68,7 @@ class PopularMoviesActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshL
         viewModel = ViewModelProviders.of(this, popularMoviesViewModelFactory).get(PopularMoviesViewModel::class.java)
 
         viewModel.loadingStatus.observe(this, Observer { showLoading -> updateLoadingState(showLoading!!) })
+        viewModel.selectedMovie.observe(this, Observer { movie -> popularDetailView.setMovie(movie!!) })
         viewModel.popularMovies.subscribe { movies -> onPopularMoviesUpdated(movies) }
 
         viewModel.loadPopularMovies()
@@ -67,6 +76,11 @@ class PopularMoviesActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshL
 
     override fun onRefresh() {
         viewModel.loadPopularMovies()
+    }
+
+    override fun onMovieTapped(movie: Movie) {
+        popularDetailView.setState(BottomSheetBehavior.STATE_COLLAPSED)
+        viewModel.onMovieSelected(movie)
     }
 
     private fun onPopularMoviesUpdated(movies: List<Movie>) {

@@ -1,4 +1,4 @@
-package com.tweener.simplemoviedb.movie
+package com.tweener.simplemoviedb.movie.list
 
 import android.support.v7.widget.RecyclerView
 import android.view.MotionEvent

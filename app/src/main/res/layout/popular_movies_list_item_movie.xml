@@ -6,7 +6,7 @@
     android:clickable="true"
     android:focusable="true">
 
-    <com.tweener.simplemoviedb.movie.PopularMoviesMovieItem
+    <com.tweener.simplemoviedb.movie.list.PopularMoviesMovieItem
         android:id="@+id/popular_movies_list_item_movie_item"
         android:layout_width="match_parent"
         android:layout_height="@dimen/popuplar_movies_list_item_movie_height"/>

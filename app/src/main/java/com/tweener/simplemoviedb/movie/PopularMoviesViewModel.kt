@@ -2,7 +2,6 @@ package com.tweener.simplemoviedb.movie
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
-import android.util.Log
 import com.tweener.simplemoviedb.core.domain.entity.Movie
 import com.tweener.simplemoviedb.core.domain.usecase.GetPopularMoviesUseCase
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -26,6 +25,7 @@ class PopularMoviesViewModel(
 
     // Observable properties
     val loadingStatus = MutableLiveData<Boolean>()
+    val selectedMovie = MutableLiveData<Movie>()
     val popularMovies: BehaviorSubject<List<Movie>> = BehaviorSubject.create()
 
     override fun onCleared() {
@@ -52,6 +52,6 @@ class PopularMoviesViewModel(
     }
 
     fun onMovieSelected(movie: Movie) {
-        Log.i(TAG, "onMovieSelected: ${movie.originalTitle}")
+        selectedMovie.value = movie
     }
 }

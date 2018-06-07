@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.tweener.simplemoviedb.movie.PopularMoviesListView
+            <com.tweener.simplemoviedb.movie.list.PopularMoviesListView
                 android:id="@+id/movies_list_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -26,6 +26,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/popular_movies_empty"/>
+
+            <com.tweener.simplemoviedb.movie.detail.PopularDetailView
+                android:id="@+id/movie_detail_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
         </FrameLayout>
     </android.support.v4.widget.SwipeRefreshLayout>
 </android.support.constraint.ConstraintLayout>

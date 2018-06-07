@@ -48,4 +48,30 @@
         <item name="android:textColor">@color/popuplar_movies_list_item_movie_ratings</item>
     </style>
 
+    <style name="movie_detail_bottom_sheet">
+        <item name="behavior_hideable">true</item>
+        <item name="behavior_peekHeight">@dimen/movie_detail_height</item>
+        <item name="android:background">@color/movie_detail_background</item>
+        <item name="android:padding">@dimen/movie_detail_padding</item>
+    </style>
+
+    <style name="movie_detail_title">
+        <item name="android:textSize">@dimen/movie_detail_title_size</item>
+        <item name="android:textColor">@color/movie_detail_title</item>
+        <item name="android:text">@string/movie_detail_title</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="movie_detail_overview">
+        <item name="android:textSize">@dimen/movie_detail_overview_size</item>
+        <item name="android:textColor">@color/movie_detail_overview</item>
+    </style>
+
+    <style name="movie_detail_more_details">
+        <item name="android:textSize">@dimen/movie_detail_more_details_size</item>
+        <item name="android:textColor">@color/movie_detail_overview</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:text">@string/movie_detail_more_details</item>
+    </style>
+
 </resources>

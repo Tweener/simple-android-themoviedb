@@ -1,4 +1,4 @@
-package com.tweener.simplemoviedb.movie
+package com.tweener.simplemoviedb.movie.list
 
 import android.content.Context
 import android.os.Build

@@ -12,6 +12,14 @@
     <dimen name="popuplar_movies_list_item_movie_ratings_size">14sp</dimen>
     <dimen name="popuplar_movies_list_item_movie_image_padding">10dp</dimen>
 
+    <dimen name="movie_detail_height">240dp</dimen>
+    <dimen name="movie_detail_padding">12dp</dimen>
+    <dimen name="movie_detail_title_margin_bottom">10dp</dimen>
+    <dimen name="movie_detail_title_size">20sp</dimen>
+    <dimen name="movie_detail_overview_margin_bottom">40dp</dimen>
+    <dimen name="movie_detail_overview_size">16sp</dimen>
+    <dimen name="movie_detail_more_details_size">14sp</dimen>
+
     <!-- CardView -->
     <dimen name="cardview_corner_radius">4dp</dimen>
     <dimen name="cardview_elevation">3dp</dimen>
