@@ -81,4 +81,9 @@
         <item name="android:text">@string/movie_detail_more_details</item>
     </style>
 
+    <style name="popular_movies_filter_fab">
+        <item name="android:src">@drawable/ic_filter</item>
+        <item name="elevation">@dimen/fab_elevation</item>
+    </style>
+
 </resources>

@@ -4,4 +4,6 @@
     <string name="popular_movies_list_section_header">POPULAR MOVIES</string>
     <string name="movie_detail_synopsis">Synopsis</string>
     <string name="movie_detail_more_details">Add here more info about the movie (video, links, genres, etc.)</string>
+    <string name="popular_movies_order_asc">Movies are ordered by ascending release date</string>
+    <string name="popular_movies_order_desc">Movies are ordered by descending release date</string>
 </resources>

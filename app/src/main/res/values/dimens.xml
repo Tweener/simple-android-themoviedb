@@ -21,6 +21,9 @@
     <dimen name="movie_detail_overview_size">16sp</dimen>
     <dimen name="movie_detail_more_details_size">14sp</dimen>
 
+    <dimen name="fab_elevation">3dp</dimen>
+    <dimen name="fab_margin">10dp</dimen>
+
     <!-- CardView -->
     <dimen name="cardview_corner_radius">4dp</dimen>
     <dimen name="cardview_elevation">3dp</dimen>

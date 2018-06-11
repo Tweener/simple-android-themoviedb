@@ -1,7 +1,10 @@
 package com.tweener.simplemoviedb.movie
 
+import android.app.Application
+import android.arch.lifecycle.AndroidViewModel
 import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
+import com.tweener.simplemoviedb.R
+import com.tweener.simplemoviedb.core.SimpleMovieDBApplication
 import com.tweener.simplemoviedb.core.domain.entity.Movie
 import com.tweener.simplemoviedb.core.domain.usecase.GetPopularMoviesUseCase
 import io.reactivex.Single
@@ -9,26 +12,39 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import io.reactivex.subjects.BehaviorSubject
+import java.text.SimpleDateFormat
+import java.util.*
 
 /**
  * @author Vivien Mahe
  */
 class PopularMoviesViewModel(
+        application: Application,
         private val movieService: MovieService
-) : ViewModel() {
+) : AndroidViewModel(application) {
 
     companion object {
         private val TAG = PopularMoviesViewModel::class.java.simpleName!!
+
+        private val MOVIE_DATE_FORMAT = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        private val MOVIE_DATE_ASC_COMPARATOR = Comparator<Movie> { o1: Movie, o2: Movie ->
+            MOVIE_DATE_FORMAT.parse(o1.releaseDate).compareTo(MOVIE_DATE_FORMAT.parse(o2.releaseDate))
+        }
+        private val MOVIE_DATE_DESC_COMPARATOR = Comparator<Movie> { o1: Movie, o2: Movie ->
+            MOVIE_DATE_FORMAT.parse(o2.releaseDate).compareTo(MOVIE_DATE_FORMAT.parse(o1.releaseDate))
+        }
     }
 
     private val getPopularMoviesUseCase = GetPopularMoviesUseCase(movieService)
     private val disposables = CompositeDisposable()
     private var currentPage: Int = 1
+    private var orderByDateAsc: Boolean = false
 
     // Observable properties
+    val toastMessage = MutableLiveData<String>()
     val loadingStatus = MutableLiveData<Boolean>()
     val selectedMovie = MutableLiveData<Movie>()
-    val popularMovies: BehaviorSubject<List<Movie>> = BehaviorSubject.create()
+    val popularMovies: BehaviorSubject<MutableList<Movie>> = BehaviorSubject.create()
 
     override fun onCleared() {
         disposables.clear()
@@ -46,9 +62,7 @@ class PopularMoviesViewModel(
                         .subscribe(
                                 { movies ->
                                     // Add existing movies to the beginning of the list
-                                    popularMovies.value?.let {
-                                        movies.addAll(0, it)
-                                    }
+                                    popularMovies.value?.let { movies.addAll(0, it) }
 
                                     popularMovies.onNext(movies)
                                     loadingStatus.value = false
@@ -64,6 +78,23 @@ class PopularMoviesViewModel(
     fun loadMorePopularMovies() {
         currentPage++
         loadPopularMovies()
+    }
+
+    fun orderMoviesByDate() {
+        val movies = popularMovies.value
+
+        // Order movie by ascending or descending order
+        val comparator = if (orderByDateAsc) MOVIE_DATE_ASC_COMPARATOR else MOVIE_DATE_DESC_COMPARATOR
+        Collections.sort(movies, comparator)
+
+        // Show a toast
+        val orderMessageResId = if (orderByDateAsc) R.string.popular_movies_order_asc else R.string.popular_movies_order_desc
+        toastMessage.value = getApplication<SimpleMovieDBApplication>().getString(orderMessageResId)
+
+        // Toggle the movie sorting order
+        orderByDateAsc = orderByDateAsc.not()
+
+        popularMovies.onNext(movies)
     }
 
     fun onMovieSelected(movie: Movie) {

@@ -4,12 +4,15 @@ import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.design.widget.BottomSheetBehavior
+import android.support.design.widget.FloatingActionButton
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.TextView
+import android.widget.Toast
 import butterknife.BindView
 import butterknife.ButterKnife
+import com.jakewharton.rxbinding2.view.RxView
 import com.tweener.simplemoviedb.R
 import com.tweener.simplemoviedb.core.SimpleMovieDBApplication
 import com.tweener.simplemoviedb.core.domain.entity.Movie
@@ -43,6 +46,9 @@ class PopularMoviesActivity : AppCompatActivity(), PopularMoviesListAdapter.Call
     @BindView(R.id.movie_detail_view)
     lateinit var popularDetailView: PopularDetailView
 
+    @BindView(R.id.filter_fab)
+    lateinit var filterFab: FloatingActionButton
+
     private lateinit var viewModel: PopularMoviesViewModel
     private lateinit var adapter: PopularMoviesListAdapter
 
@@ -71,12 +77,18 @@ class PopularMoviesActivity : AppCompatActivity(), PopularMoviesListAdapter.Call
 
         val movieService = retrofit.create(MovieService::class.java)
 
-        val popularMoviesViewModelFactory = PopularMoviesViewModelFactory(movieService)
+        val popularMoviesViewModelFactory = PopularMoviesViewModelFactory(application, movieService)
         viewModel = ViewModelProviders.of(this, popularMoviesViewModelFactory).get(PopularMoviesViewModel::class.java)
 
+        viewModel.toastMessage.observe(this, Observer { message -> Toast.makeText(this, message, Toast.LENGTH_LONG).show() })
         viewModel.loadingStatus.observe(this, Observer { showLoading -> updateLoadingState(showLoading!!) })
         viewModel.selectedMovie.observe(this, Observer { movie -> popularDetailView.setMovie(movie!!) })
         viewModel.popularMovies.subscribe { movies -> onPopularMoviesUpdated(movies) }
+
+        RxView.clicks(filterFab).subscribe {
+            viewModel.orderMoviesByDate()
+            popularMoviesListView.scrollToPosition(0)
+        }
 
         viewModel.loadPopularMovies()
     }
