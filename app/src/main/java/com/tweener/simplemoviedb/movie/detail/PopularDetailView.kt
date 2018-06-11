@@ -28,6 +28,9 @@ class PopularDetailView(context: Context, attrs: AttributeSet) : FrameLayout(con
     @BindView(R.id.movie_detail_bottom_sheet)
     lateinit var bottomSheet: ViewGroup
 
+    @BindView(R.id.movie_detail_title)
+    lateinit var titleTextView: TextView
+
     @BindView(R.id.movie_detail_overview)
     lateinit var overviewTextView: TextView
 
@@ -56,6 +59,7 @@ class PopularDetailView(context: Context, attrs: AttributeSet) : FrameLayout(con
     }
 
     fun setMovie(movie: Movie) {
+        movie.originalTitle?.let { titleTextView.text = it }
         movie.overview?.let { overviewTextView.text = it }
     }
 

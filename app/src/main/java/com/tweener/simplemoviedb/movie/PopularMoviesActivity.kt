@@ -15,13 +15,14 @@ import com.tweener.simplemoviedb.core.SimpleMovieDBApplication
 import com.tweener.simplemoviedb.core.domain.entity.Movie
 import com.tweener.simplemoviedb.core.extensions.gone
 import com.tweener.simplemoviedb.core.extensions.visible
+import com.tweener.simplemoviedb.core.listener.LoadMoreOnScrollListener
 import com.tweener.simplemoviedb.movie.detail.PopularDetailView
 import com.tweener.simplemoviedb.movie.list.PopularMoviesListAdapter
 import com.tweener.simplemoviedb.movie.list.PopularMoviesListView
 import retrofit2.Retrofit
 import javax.inject.Inject
 
-class PopularMoviesActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener, PopularMoviesListAdapter.Callback {
+class PopularMoviesActivity : AppCompatActivity(), PopularMoviesListAdapter.Callback {
 
     companion object {
         private val TAG = PopularMoviesActivity::class.java.simpleName!!
@@ -52,10 +53,16 @@ class PopularMoviesActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshL
         getSimpleMovieDBApp().applicationComponent.inject(this)
         ButterKnife.bind(this)
 
-        swipeRefreshLayout.setOnRefreshListener(this)
+        swipeRefreshLayout.isEnabled = false
 
         adapter = PopularMoviesListAdapter(this)
         popularMoviesListView.adapter = adapter
+        popularMoviesListView.addOnScrollListener(object : LoadMoreOnScrollListener() {
+            override fun onLoadMore() {
+                Log.i(TAG, "onLoadMore: ")
+                viewModel.loadMorePopularMovies()
+            }
+        })
 
         popularDetailView.popularDetailViewStatus.observe(this, Observer { isDetailViewOpened ->
             // Disable swipe to refresh when the bottom sheet is opened
@@ -71,10 +78,6 @@ class PopularMoviesActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshL
         viewModel.selectedMovie.observe(this, Observer { movie -> popularDetailView.setMovie(movie!!) })
         viewModel.popularMovies.subscribe { movies -> onPopularMoviesUpdated(movies) }
 
-        viewModel.loadPopularMovies()
-    }
-
-    override fun onRefresh() {
         viewModel.loadPopularMovies()
     }
 

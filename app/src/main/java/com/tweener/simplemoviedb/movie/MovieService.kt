@@ -12,5 +12,5 @@ import retrofit2.http.Query
 interface MovieService {
 
     @GET(API_POPULAR_MOVIES)
-    fun getPopularMovies(@Query("api_key") apiKey: String): Single<ApiMovies>
+    fun getPopularMovies(@Query("api_key") apiKey: String, @Query("page") page: Int): Single<ApiMovies>
 }

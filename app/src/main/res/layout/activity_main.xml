@@ -19,13 +19,15 @@
                 android:id="@+id/movies_list_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/popuplar_movies_list_margin"/>
+                android:layout_margin="@dimen/popuplar_movies_list_margin"
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/movies_list_empty_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/popular_movies_empty"/>
+                android:text="@string/popular_movies_empty"
+                android:visibility="gone"/>
 
             <com.tweener.simplemoviedb.movie.detail.PopularDetailView
                 android:id="@+id/movie_detail_view"
