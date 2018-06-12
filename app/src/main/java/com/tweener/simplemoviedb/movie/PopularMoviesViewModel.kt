@@ -26,10 +26,21 @@ class PopularMoviesViewModel(
     companion object {
         private val TAG = PopularMoviesViewModel::class.java.simpleName!!
 
+        /**
+         * Date format used by The Movie DB for movies release date
+         */
         private val MOVIE_DATE_FORMAT = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+
+        /**
+         * Comparator to sort movies by ascending release date
+         */
         private val MOVIE_DATE_ASC_COMPARATOR = Comparator<Movie> { o1: Movie, o2: Movie ->
             MOVIE_DATE_FORMAT.parse(o1.releaseDate).compareTo(MOVIE_DATE_FORMAT.parse(o2.releaseDate))
         }
+
+        /**
+         * Comparator to sort movies by descending release date
+         */
         private val MOVIE_DATE_DESC_COMPARATOR = Comparator<Movie> { o1: Movie, o2: Movie ->
             MOVIE_DATE_FORMAT.parse(o2.releaseDate).compareTo(MOVIE_DATE_FORMAT.parse(o1.releaseDate))
         }
@@ -47,9 +58,13 @@ class PopularMoviesViewModel(
     val popularMovies: BehaviorSubject<MutableList<Movie>> = BehaviorSubject.create()
 
     override fun onCleared() {
+        // Cancel any ongoing requests when this ViewModel is stopped
         disposables.clear()
     }
 
+    /**
+     * Loads the current page of popular movies (page 1 is default)
+     */
     fun loadPopularMovies() {
         val params = GetPopularMoviesUseCase.RequestParams(currentPage)
 
@@ -61,7 +76,7 @@ class PopularMoviesViewModel(
                         .flatMap { movies -> Single.just(movies.toMutableList()) }
                         .subscribe(
                                 { movies ->
-                                    // Add existing movies to the beginning of the list
+                                    // Append existing movies at the beginning of the newly fetched movies list
                                     popularMovies.value?.let { movies.addAll(0, it) }
 
                                     popularMovies.onNext(movies)
@@ -75,11 +90,18 @@ class PopularMoviesViewModel(
         )
     }
 
+    /**
+     * Loads the next page of popular movies
+     */
     fun loadMorePopularMovies() {
         currentPage++
+
         loadPopularMovies()
     }
 
+    /**
+     * Order movies by date, either ascending or descending
+     */
     fun orderMoviesByDate() {
         val movies = popularMovies.value
 

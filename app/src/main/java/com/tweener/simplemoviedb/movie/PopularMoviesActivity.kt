@@ -71,8 +71,8 @@ class PopularMoviesActivity : AppCompatActivity(), PopularMoviesListAdapter.Call
         })
 
         popularDetailView.popularDetailViewStatus.observe(this, Observer { isDetailViewOpened ->
-            // Disable swipe to refresh when the bottom sheet is opened
-            swipeRefreshLayout.isEnabled = isDetailViewOpened!!.not()
+            // Hide the FAB when the bottom sheet is opened
+            if (isDetailViewOpened!!) filterFab.gone() else filterFab.visible()
         })
 
         val movieService = retrofit.create(MovieService::class.java)
@@ -103,6 +103,7 @@ class PopularMoviesActivity : AppCompatActivity(), PopularMoviesListAdapter.Call
 
         val showList = movies.isNotEmpty()
 
+        // Displays the list of movies if any, otherwise shows the empty view
         if (showList) popularMoviesEmptyView.gone() else popularMoviesEmptyView.visible()
         if (showList) popularMoviesListView.visible() else popularMoviesListView.gone()
 
