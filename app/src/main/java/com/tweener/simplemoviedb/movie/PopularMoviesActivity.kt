@@ -83,7 +83,7 @@ class PopularMoviesActivity : AppCompatActivity(), PopularMoviesListAdapter.Call
         viewModel.toastMessage.observe(this, Observer { message -> Toast.makeText(this, message, Toast.LENGTH_LONG).show() })
         viewModel.loadingStatus.observe(this, Observer { showLoading -> updateLoadingState(showLoading!!) })
         viewModel.selectedMovie.observe(this, Observer { movie -> popularDetailView.setMovie(movie!!) })
-        viewModel.popularMovies.subscribe { movies -> onPopularMoviesUpdated(movies) }
+        viewModel.popularMovies.observe(this, Observer { movies -> onPopularMoviesUpdated(movies!!) })
 
         RxView.clicks(filterFab).subscribe {
             viewModel.orderMoviesByDate()

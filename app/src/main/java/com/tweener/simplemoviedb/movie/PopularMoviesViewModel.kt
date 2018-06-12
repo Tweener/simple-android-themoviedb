@@ -11,7 +11,6 @@ import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import io.reactivex.subjects.BehaviorSubject
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -55,7 +54,7 @@ class PopularMoviesViewModel(
     val toastMessage = MutableLiveData<String>()
     val loadingStatus = MutableLiveData<Boolean>()
     val selectedMovie = MutableLiveData<Movie>()
-    val popularMovies: BehaviorSubject<MutableList<Movie>> = BehaviorSubject.create()
+    val popularMovies = MutableLiveData<MutableList<Movie>>()
 
     override fun onCleared() {
         // Cancel any ongoing requests when this ViewModel is stopped
@@ -79,11 +78,10 @@ class PopularMoviesViewModel(
                                     // Append existing movies at the beginning of the newly fetched movies list
                                     popularMovies.value?.let { movies.addAll(0, it) }
 
-                                    popularMovies.onNext(movies)
+                                    popularMovies.value = movies
                                     loadingStatus.value = false
                                 },
                                 { throwable ->
-                                    popularMovies.onError(throwable)
                                     loadingStatus.value = false
                                 }
                         )
@@ -116,7 +114,7 @@ class PopularMoviesViewModel(
         // Toggle the movie sorting order
         orderByDateAsc = orderByDateAsc.not()
 
-        popularMovies.onNext(movies)
+        popularMovies.value = movies
     }
 
     fun onMovieSelected(movie: Movie) {
